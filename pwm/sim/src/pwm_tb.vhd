@@ -1,0 +1,68 @@
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity pwm_tb is
+end pwm_tb;
+
+architecture arch of pwm_tb is
+
+component pwm is
+  generic (
+    max_count       : integer := 25000000
+  );
+  port (
+    clk             : in  std_logic; 
+    reset           : in  std_logic;
+    enable          : in  std_logic;
+    period          : in  std_logic_vector(20 downto 0);
+    duty            : in  std_logic_vector(20 downto 0);
+    output          : out std_logic
+  );  
+end component;  
+
+signal output       : std_logic;
+constant period_clk : time := 10ns;
+signal clk          : std_logic := '0';
+signal reset        : std_logic := '1';
+signal period_pwm   : std_logic_vector(20 downto 0) := "000000000000000100000";
+signal duty         : std_logic_vector(20 downto 0) := "000000000000000100000";
+signal enable       : std_logic := '0';
+
+begin
+
+-- clock process
+clock: process
+  begin
+    clk <= not clk;
+    wait for period_clk/2;
+end process; 
+ 
+-- reset process
+async_reset: process
+  begin
+    wait for 2 * period_clk;
+    reset <= '0';
+    wait;
+end process; 
+--reset process
+en_proc: process
+begin 
+        wait for 1us;
+        enable <= '1';
+        wait;
+end process;
+
+uut: pwm  
+  generic map (
+    max_count => 4
+  )
+  port map(
+    clk       => clk,
+    reset     => reset,
+    enable    => enable,
+    period    => period_pwm,
+    duty      => duty,
+    output    => output
+  );
+end arch;

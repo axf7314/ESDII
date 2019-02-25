@@ -1,0 +1,106 @@
+# //  ModelSim SE-64 10.7b Jun  8 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 10.7b Compiler 2018.06 Jun  8 2018
+# Start time: 10:06:18 on Feb 06,2019
+# vcom -reportprogress 300 -93 -work work ../../src/pwm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture beh of pwm
+# End time: 10:06:18 on Feb 06,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.7b Compiler 2018.06 Jun  8 2018
+# Start time: 10:06:18 on Feb 06,2019
+# vcom -reportprogress 300 -93 -work work ../src/pwm_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pwm_tb
+# -- Compiling architecture arch of pwm_tb
+# ** Warning: ../src/pwm_tb.vhd(25): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/pwm_tb.vhd(51): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 10:06:18 on Feb 06,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" pwm_tb 
+# Start time: 10:06:19 on Feb 06,2019
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pwm_tb(arch)#1
+# Loading ieee.numeric_std(body)
+# Loading work.pwm(beh)#1
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: axf7314  Hostname: ECTET-1360-04  ProcessID: 15168
+#           Attempting to use alternate WLF file "./wlftc0sc4f".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftc0sc4f
+# Causality operation skipped due to absence of debug database file
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 10.7b Compiler 2018.06 Jun  8 2018
+# Start time: 10:14:42 on Feb 06,2019
+# vcom -reportprogress 300 -93 -work work ../../src/pwm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture beh of pwm
+# End time: 10:14:42 on Feb 06,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.7b Compiler 2018.06 Jun  8 2018
+# Start time: 10:14:42 on Feb 06,2019
+# vcom -reportprogress 300 -93 -work work ../src/pwm_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pwm_tb
+# -- Compiling architecture arch of pwm_tb
+# ** Warning: ../src/pwm_tb.vhd(25): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/pwm_tb.vhd(51): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 10:14:43 on Feb 06,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
+# End time: 10:14:44 on Feb 06,2019, Elapsed time: 0:08:25
+# Errors: 0, Warnings: 5
+# vsim -voptargs="+acc" pwm_tb 
+# Start time: 10:14:44 on Feb 06,2019
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pwm_tb(arch)#1
+# Loading ieee.numeric_std(body)
+# Loading work.pwm(beh)#1
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: axf7314  Hostname: ECTET-1360-04  ProcessID: 15168
+#           Attempting to use alternate WLF file "./wlfty8j435".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfty8j435
